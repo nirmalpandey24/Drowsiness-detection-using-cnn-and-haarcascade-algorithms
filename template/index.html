@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsy Driver</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logoContent">
+            <a href="/"><img src="static/img/logo.png" alt=""></a>
+            <h1 class="logoName"></h1>
+        </div>
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#product">Tips</a>
+            <a href="#contact">contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="homeContent">
+            <h2 data-setbg="static/img/bg.png">Drive Alert Stay Unhurt </h2>
+            <p>Your Guardian Against Drowsy Driving – Detecting Fatigue, Ensuring Safety.</p>
+
+         
+            <div class="home-btn">
+                <a href="/start_detection" id="start-button"><button>Start</button></a>
+
+                <!-- <button id="start-button">Start</button> -->
+            </div>
+            <div id="video-container">
+                <video id="video" controls></video>
+            </div>
+            
+
+            
+
+
+        </div>
+    </section>
+
+    <section class="product" id="product">
+        <div class="heading">
+            <h2>Tips</h2>
+        </div>
+        <div class="product-row">
+            <div class="box">
+                <div class="img">
+                    <a href="/"><img src="static/img/sleep.png" alt=""></a>
+                </div>
+                <div class="product-content">
+                    <h3>Get Adequate Sleep:</h3>
+                    <p>Ensure you are well-rested before driving to prevent fatigue.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <a href="/"><img src="static/img/break.png" alt=""></a>
+                </div>
+                <div class="product-content">
+                    <h3>Take Regular Breaks:</h3>
+                    <p>Schedule breaks to rest and stretch during long drives.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <a href="/"><img src="static/img/drink.png" alt=""></a>
+                </div>
+                <div class="product-content">
+                    <h3>Stay Hydrated:</h3>
+                    <p>Drink water to stay alert, as dehydration can lead to fatigue. </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <a href="/"><img src="static/img/food.png" alt=""></a>
+                </div>
+                <div class="product-content">
+                    <h3>Avoid Heavy Meals:</h3>
+                    <p>Opt for lighter snacks to prevent drowsiness caused by a full stomach.</p>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="box-container">
+            <div class="mainBox">
+                <div class="content">
+                    <a href="/"><img src="static/img/logo.png" alt=""></a>
+                    <h1 class="logoName">Drowsy Driver </h1>
+                </div>
+                <p>A driver's best alarm.</p>
+            </div>
+            <div class="box">
+                <h3>Quick link</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>Tips</a>
+                <a href="#"> <i class="fas fa-arrow-right"></i>contact</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i>+97798765431</a>
+                <a href="#"> <i class="fas fa-envelope"></i>drowsydriver@gmail.com</a>
+            </div>
+        </div>
+        <div class="credit">
+            created by <span>diya, Roniya, Nirmal </span> | all rights reserved!
+        </div>
+    </footer>
+
+    <script src="{{url_for('static',filename='js/index.js')}}"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Center the video frame and button */
+        body {
+            background-image: url("{{ url_for('static', filename='img/bg.png') }}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Make sure the background covers the entire viewport */
+            margin: 0; /* Remove default body margin */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #video-feed, #exit {
+            display: block;
+            text-align: center; /* Center button text */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="video-feed" src="{{ url_for('video') }}" alt="Video Feed">
+        <br>
+        <a href="/stop_detection" id="exit"><button>Exit</button></a>
+    </div>
+    <script>
+        document.getElementById('start-button').addEventListener('click', function() {
+            startDetection();
+        });
+
+        function startDetection() {
+            var image = document.getElementById("video-feed");
+            image.style.display = "block";
+        }
+    </script>
+</body>
+</html>
